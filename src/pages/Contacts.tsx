@@ -12,7 +12,7 @@ export default function Contacts() {
   const dispatch = useDispatch();
   // console.log(contacts);
   return (
-    <div className=" bg-gray-200 h-full flex flex-col items-center pt-3 md:pt-10">
+    <div className=" bg-gray-200 h-[90vh] flex flex-col items-center pt-3 md:pt-10">
       <button
         onClick={() => dispatch(setCurrentModal({}))}
         className="font-bold py-2 px-4 border-black border-2 bg-gray-300"

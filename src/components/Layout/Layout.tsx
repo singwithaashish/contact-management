@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
 
   return (
     <div className=" min-h-screen bg-gray-200">
-      <header className="h-[10vh] bg-gray-800 text-white flex items-center justify-center">
+      <header className="h-[10vh] max-h-[10vh] overflow-hidden bg-gray-800 text-white flex items-center justify-center">
         <h1 className="text-2xl font-bold">
           {currentRoute === "/contacts" ? "Contacts" : "Charts and Maps"}
         </h1>

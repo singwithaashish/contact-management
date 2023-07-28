@@ -4,7 +4,8 @@ import { Contact } from "../typings";
 
 export interface ContactState {
   contacts: Contact[];
-  currentModal: Contact | {} | null;
+  currentModal: {} | null;
+  editingContact: Contact | null;
 }
 
 const initialState: ContactState = {
@@ -16,7 +17,8 @@ const initialState: ContactState = {
       statusIsActive: true,
     },
   ],
-    currentModal: null,
+  currentModal: null,
+  editingContact: null,
 };
 
 export const ContactSlice = createSlice({
@@ -38,13 +40,16 @@ export const ContactSlice = createSlice({
       );
     },
     setCurrentModal: (state, action: PayloadAction<Contact | {} | null>) => {
-        state.currentModal = action.payload;
+      state.currentModal = action.payload;
+    },
+    setEditingContact: (state, action: PayloadAction<Contact | null>) => {
+        state.editingContact = action.payload;
         }
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addContact, updateContact, deleteContact, setCurrentModal } =
+export const { addContact, updateContact, deleteContact, setCurrentModal, setEditingContact } =
   ContactSlice.actions;
 
 export default ContactSlice.reducer;

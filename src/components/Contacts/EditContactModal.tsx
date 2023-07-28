@@ -5,39 +5,53 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addContact,
   setCurrentModal,
+  setEditingContact,
   updateContact,
 } from "../../app/contactSlice";
 import { setCommentRange } from "typescript";
 import { uid } from "../../utils/getRandomId";
 
-export default function CreateContactModal() {
+export default function EditContactModal() {
   // const defaultData = {} as Contact;
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [status, setStatus] = useState<boolean>(false);
   const [id, setId] = useState<string>(uid());
-  const currentModal = useSelector((state: any) => state.contact.currentModal);
+  const editingContact: Contact | null = useSelector((state: any) => state.contact.editingContact);
   const dispatch = useDispatch();
-  // const [editing, setEditing] = useState<boolean>(false);
+//   const [editing, setEditing] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const contact = { id: id, firstName, lastName, statusIsActive: status };
-    dispatch(addContact(contact));
-    dispatch(setCurrentModal(null));
+    
+      dispatch(updateContact(contact));
+      dispatch(setEditingContact(null));
+      return;
+
+    
   };
 
-  
+  useEffect(() => {
+    if(editingContact === null) {
+        return;
+    }
+    setId(editingContact?.id);
+    setFirstName(editingContact.firstName);
+    setLastName(editingContact.lastName);
+    setStatus(editingContact.statusIsActive);
+    
+  }, [editingContact]);
 
   return (
     <Modal
       dismissible
-      show={currentModal !== null}
+      show={editingContact !== null}
       onClose={() => dispatch(setCurrentModal(null))}
     >
       <Modal.Header>
-        { "Create Contact Screen"}
+        {editingContact ? "Edit Contact Screen" : "Create Contact Screen"}
       </Modal.Header>
       <Modal.Body>
         <form

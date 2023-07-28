@@ -1,8 +1,9 @@
 import React from "react";
 import { Contact } from "../../typings";
 import { useDispatch } from "react-redux";
-import { deleteContact, setCurrentModal } from "../../app/contactSlice";
+import { deleteContact, setCurrentModal, setEditingContact } from "../../app/contactSlice";
 import { Modal } from "flowbite-react";
+import EditContactModal from "./EditContactModal";
 
 interface ContactElementProps {
   contact: Contact;
@@ -15,7 +16,8 @@ export default function ContactElement({ contact }: ContactElementProps) {
     dispatch(deleteContact(contact.id));
   };
   const handleEdit = () => {
-    dispatch(setCurrentModal(contact));
+    // dispatch(setCurrentModal(contact));
+    dispatch(setEditingContact(contact));
   };
   return (
     <div className="bg-white col-span-1 rounded-lg hover:shadow p-4 duration-200">
@@ -26,6 +28,7 @@ export default function ContactElement({ contact }: ContactElementProps) {
           contact={contact}
         />
       </div>
+      <EditContactModal />
       <div className="text-xl font-bold mb-2">
         {contact.firstName} {contact.lastName}
       </div>
