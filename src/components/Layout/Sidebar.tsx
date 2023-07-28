@@ -7,6 +7,7 @@ interface SidebarProps {
 
 export default function Sidebar(props: SidebarProps) {
   const [currentRoute, setCurrentRoute] = useState(window.location.pathname);
+  
   return (
     <div className="grid grid-cols-12 min-h-screen">
       {/* the sidebar takes 1/6th of screen and content takes the remaining space */}
