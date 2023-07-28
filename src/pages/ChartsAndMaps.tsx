@@ -62,7 +62,7 @@ export default function ChartsAndMaps() {
 
   console.log(countriesData);
   return (
-    <div className=" mx-auto p-4 bg-gray-200">
+    <div className=" mx-auto p-4 overflow-y-scroll h-[90vh]">
       {/* Map */}
       <CasesMap />
       <PieChart />

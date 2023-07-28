@@ -6,10 +6,6 @@ import { addContact, setCurrentModal, updateContact } from "../../app/contactSli
 import { setCommentRange } from "typescript";
 import { uid } from "../../utils/getRandomId";
 
-// interface CreateContactModalProps {
-//   openModal: string | undefined;
-//   setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>;
-// }
 
 export default function CreateContactModal() {
   const defaultData = {} as Contact;
@@ -53,9 +49,9 @@ export default function CreateContactModal() {
 
   return (
     <Modal
+    dismissible
       show={currentModal !== null}
       onClose={() => dispatch(setCurrentModal(null))}
-      className="w-[50vw]"
     >
       <Modal.Header>
         {defaultData.firstName
@@ -63,7 +59,7 @@ export default function CreateContactModal() {
           : "Create Contact Screen"}
       </Modal.Header>
       <Modal.Body>
-        <form className="border-2 border-black p-5" onSubmit={e => handleSubmit(e)}>
+        <form className=" p-5 flex flex-col items-center gap-y-5 justify-center" onSubmit={e => handleSubmit(e)}>
           <div className="flex gap-5">
             <label htmlFor="firstName">First Name</label>
             <input
@@ -72,7 +68,7 @@ export default function CreateContactModal() {
               id="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="border-2 border-black p-2"
+              className="border rounded border-black p-2"
               placeholder="First Name"
             />
           </div>
@@ -84,7 +80,7 @@ export default function CreateContactModal() {
               id="lastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="border-2 border-black p-2"
+              className="border rounded border-black p-2"
               placeholder="Last Name"
             />
           </div>
@@ -128,3 +124,5 @@ export default function CreateContactModal() {
     </Modal>
   );
 }
+
+ 
