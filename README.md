@@ -27,7 +27,7 @@ Here is a working live demo: https://celebrated-licorice-332ea3.netlify.app
 ## Getting started
 Clone the repository
 ```
-git clone
+git clone https://github.com/singwithaashish/contact-management
 ```
 Install dependencies
 ```
@@ -71,11 +71,12 @@ src
 ```
 
 ## Screenshots
-![Screen Shot 2023-07-28 at 21 19 06](https://github.com/singwithaashish/contact-management/assets/52033403/1c8f0d1e-e786-4175-97ae-2a3ed2f7166b)
-![Screen Shot 2023-07-13 at 14 00 29](https://github.com/singwithaashish/contact-management/assets/52033403/c6765c72-483b-4c3d-9e90-5357df5eeff2)
-![Screen Shot 2023-07-28 at 21 18 42](https://github.com/singwithaashish/contact-management/assets/52033403/3710b3c6-e246-41d3-9047-0e6d2f073b87)
 
 ![Screenshot from 2023-07-28 21-18-28](https://github.com/singwithaashish/contact-management/assets/52033403/76318bec-15df-4add-8a09-f9bd3d338447)
 ![Screenshot from 2023-07-28 21-18-13](https://github.com/singwithaashish/contact-management/assets/52033403/544d1568-c182-4440-89ce-d44a919f1b49)
 ![Screenshot from 2023-07-28 21-17-55](https://github.com/singwithaashish/contact-management/assets/52033403/130e990d-3611-43f3-801a-4950d1c2096c)
+
+![Screen Shot 2023-07-28 at 21 19 06](https://github.com/singwithaashish/contact-management/assets/52033403/1c8f0d1e-e786-4175-97ae-2a3ed2f7166b)
+![Screen Shot 2023-07-28 at 21 18 42](https://github.com/singwithaashish/contact-management/assets/52033403/3710b3c6-e246-41d3-9047-0e6d2f073b87)
+
 
