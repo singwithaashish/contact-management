@@ -12,7 +12,7 @@ export default function Contacts() {
   const dispatch = useDispatch();
   // console.log(contacts);
   return (
-    <div className=" bg-gray-200 h-full flex flex-col items-center pt-10">
+    <div className=" bg-gray-200 h-full flex flex-col items-center pt-3 md:pt-10">
       <button
         onClick={() => dispatch(setCurrentModal({}))}
         className="font-bold py-2 px-4 border-black border-2 bg-gray-300"
@@ -21,7 +21,7 @@ export default function Contacts() {
       </button>
       <CreateContactModal />
 
-      <div className="grid grid-cols-3 gap-2 mt-5 w-full overflow-y-scroll">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-5 w-full overflow-y-scroll">
         {contacts.length > 0 ? (
           contacts.map((contact: Contact, i: number) => (
             <ContactElement key={i} contact={contact} />

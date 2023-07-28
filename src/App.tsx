@@ -1,13 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ChartsAndMaps from './pages/ChartsAndMaps';
 import Contacts from './pages/Contacts';
-import Sidebar from './components/Layout/Sidebar';
+import Sidebar from './components/Layout/Layout';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/contacts" element={
+        <Route path="/" element={
           <Sidebar children={<Contacts />} />
         } />
         <Route path="/charts" element={

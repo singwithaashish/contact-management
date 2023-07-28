@@ -38,7 +38,7 @@ export default function PieChart() {
     responsive: true,
   };
   return (
-    <div className="flex w-full justify-evenly">
+    <div className="flex flex-col md:flex-row w-full justify-center md:justify-evenly">
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Global COVID-19 Data</h2>
         <p>Cases per million: {worldWideData.casesPerOneMillion}</p>
