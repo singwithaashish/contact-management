@@ -50,6 +50,7 @@ export default function CreateContactModal() {
               type="text"
               name="firstName"
               id="firstName"
+              required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className="border rounded border-black p-2"
@@ -63,6 +64,7 @@ export default function CreateContactModal() {
               name="lastName"
               id="lastName"
               value={lastName}
+              required
               onChange={(e) => setLastName(e.target.value)}
               className="border rounded border-black p-2"
               placeholder="Last Name"

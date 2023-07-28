@@ -52,6 +52,7 @@ src
 │   ├── Contact
 │   │   ├── ContactElement.tsx # contact element with name, email and phone
 │   │   ├── CraeteContact.tsx # popup form to create a contact
+│   │   ├── EditContact.tsx # popup form to edit a contact
 │   │   └── NoContactBox.tsx # box to show when there is no contact
 │   └── Layout
 │       ├── Sidebar.tsx # sidebar with links to contacts and covid dashboard
